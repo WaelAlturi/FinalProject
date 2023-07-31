@@ -1,0 +1,14 @@
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.HomeScreen.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.BuyCoinsForm.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.LoginForm.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.Admin.resources
