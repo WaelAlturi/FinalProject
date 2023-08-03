@@ -298,7 +298,7 @@ namespace FinalProject
                 Updategames();
             }
             {
-                Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\ShootOutGame\bin\Debug\Shoot Out Game MOO ICT.exe");
+                Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\bin\Debug\Shoot Out Game MOO ICT.exe");
             }
         }
 
