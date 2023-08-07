@@ -46,6 +46,8 @@
             this.Exit_Button = new System.Windows.Forms.Button();
             this.Logout_Button = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Reload_BTN = new System.Windows.Forms.Button();
+            this.Admin_Button = new System.Windows.Forms.Button();
             this.Libary_Panel.SuspendLayout();
             this.Menu_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -90,13 +92,13 @@
             // 
             this.BuyCoins.BackColor = System.Drawing.Color.Transparent;
             this.BuyCoins.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BuyCoins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.BuyCoins.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.BuyCoins.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.BuyCoins.Location = new System.Drawing.Point(771, 9);
             this.BuyCoins.Name = "BuyCoins";
-            this.BuyCoins.Size = new System.Drawing.Size(49, 27);
+            this.BuyCoins.Size = new System.Drawing.Size(49, 31);
             this.BuyCoins.TabIndex = 5;
-            this.BuyCoins.Text = "+";
+            this.BuyCoins.Text = "💲";
             this.BuyCoins.UseVisualStyleBackColor = false;
             this.BuyCoins.Click += new System.EventHandler(this.BuyCoins_Click);
             // 
@@ -183,14 +185,14 @@
             // 
             this.addShortCut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addShortCut.FlatAppearance.BorderSize = 0;
-            this.addShortCut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addShortCut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.addShortCut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addShortCut.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addShortCut.ForeColor = System.Drawing.SystemColors.Desktop;
             this.addShortCut.Location = new System.Drawing.Point(892, 73);
             this.addShortCut.Name = "addShortCut";
             this.addShortCut.Size = new System.Drawing.Size(259, 186);
             this.addShortCut.TabIndex = 1;
-            this.addShortCut.Text = "Add Shortcut To Your Collction";
+            this.addShortCut.Text = "🎮🕹️👾➕";
             this.addShortCut.UseVisualStyleBackColor = true;
             this.addShortCut.Click += new System.EventHandler(this.addShortCut_Click);
             // 
@@ -214,11 +216,12 @@
             // Menu_Panel
             // 
             this.Menu_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Menu_Panel.Controls.Add(this.Admin_Button);
             this.Menu_Panel.Controls.Add(this.Exit_Button);
             this.Menu_Panel.Controls.Add(this.Logout_Button);
-            this.Menu_Panel.Location = new System.Drawing.Point(57, 2);
+            this.Menu_Panel.Location = new System.Drawing.Point(66, 2);
             this.Menu_Panel.Name = "Menu_Panel";
-            this.Menu_Panel.Size = new System.Drawing.Size(118, 87);
+            this.Menu_Panel.Size = new System.Drawing.Size(118, 124);
             this.Menu_Panel.TabIndex = 8;
             this.Menu_Panel.Visible = false;
             // 
@@ -252,6 +255,36 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // Reload_BTN
+            // 
+            this.Reload_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.Reload_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Reload_BTN.FlatAppearance.BorderSize = 0;
+            this.Reload_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reload_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reload_BTN.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Reload_BTN.Location = new System.Drawing.Point(264, 212);
+            this.Reload_BTN.Name = "Reload_BTN";
+            this.Reload_BTN.Size = new System.Drawing.Size(62, 44);
+            this.Reload_BTN.TabIndex = 5;
+            this.Reload_BTN.Text = "🔄";
+            this.Reload_BTN.UseVisualStyleBackColor = false;
+            this.Reload_BTN.Click += new System.EventHandler(this.Reload_BTN_Click);
+            // 
+            // Admin_Button
+            // 
+            this.Admin_Button.FlatAppearance.BorderSize = 0;
+            this.Admin_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Admin_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Admin_Button.Location = new System.Drawing.Point(1, 86);
+            this.Admin_Button.Name = "Admin_Button";
+            this.Admin_Button.Size = new System.Drawing.Size(117, 36);
+            this.Admin_Button.TabIndex = 4;
+            this.Admin_Button.Text = "Admin";
+            this.Admin_Button.UseVisualStyleBackColor = true;
+            this.Admin_Button.Visible = false;
+            this.Admin_Button.Click += new System.EventHandler(this.Admin_Button_Click);
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,7 +292,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1395, 1054);
+            this.ClientSize = new System.Drawing.Size(1553, 822);
+            this.Controls.Add(this.Reload_BTN);
             this.Controls.Add(this.Menu_Panel);
             this.Controls.Add(this.Menu_Button);
             this.Controls.Add(this.Libary_Panel);
@@ -295,5 +329,7 @@
         private System.Windows.Forms.Button PACMAN;
         private System.Windows.Forms.Button ZOMBIEGAME;
         private System.Windows.Forms.Button BREAKOUT;
+        private System.Windows.Forms.Button Reload_BTN;
+        private System.Windows.Forms.Button Admin_Button;
     }
 }

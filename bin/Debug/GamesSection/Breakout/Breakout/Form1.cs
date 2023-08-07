@@ -30,6 +30,7 @@ namespace Breakout
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
 
             PlaceBlocks(); // הפעלת הפונקציה PlaceBlocks() להצגת הבלוקים במשחק.
         }

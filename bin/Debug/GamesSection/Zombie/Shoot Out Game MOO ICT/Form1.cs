@@ -22,7 +22,6 @@ namespace Shoot_Out_Game_MOO_ICT
         Random randNum = new Random();// מחולל מספר אקראי.
         int score;// הניקוד של השחקן.
         List<PictureBox> zombiesList = new List<PictureBox>();// רשימה לאחסון זומבים PictureBoxes.
-        System.Media.SoundPlayer media = new System.Media.SoundPlayer();
 
 
 
@@ -31,8 +30,6 @@ namespace Shoot_Out_Game_MOO_ICT
         {
             InitializeComponent();
             RestartGame();
-            //media.SoundLocation = "BackGroundAudio.wav";
-            //media.Play();
             this.FormBorderStyle = FormBorderStyle.None;
         }
 
@@ -84,8 +81,6 @@ namespace Shoot_Out_Game_MOO_ICT
                         this.Controls.Remove(x);// הסר את התחמושת מחלון המשחק.
                         ((PictureBox)x).Dispose();// השלך את התחמושת PictureBox.
                         ammo += 5;// הגדל את ספירת התחמושת.
-                        media.SoundLocation = "Ammo.wav";
-                        media.Play();
                     }
                 }
 
@@ -239,8 +234,6 @@ namespace Shoot_Out_Game_MOO_ICT
             shootBullet.bulletLeft = player.Left + (player.Width / 2);
             shootBullet.bulletTop = player.Top + (player.Height / 2);
             shootBullet.MakeBullet(this);
-            media.SoundLocation = "ShootAudio.wav";
-            media.Play();
         }
 
         private void MakeZombies()
@@ -274,8 +267,6 @@ namespace Shoot_Out_Game_MOO_ICT
 
             ammo.BringToFront();// הביאו את התחמושת PictureBox לחזית.
             player.BringToFront();// הביאו את ה-PictureBox של הנגן לחזית.
-
-
 
         }
 

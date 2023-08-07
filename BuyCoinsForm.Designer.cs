@@ -384,12 +384,13 @@
             this.Back_Button.BackColor = System.Drawing.Color.Transparent;
             this.Back_Button.FlatAppearance.BorderSize = 0;
             this.Back_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Back_Button.Image = ((System.Drawing.Image)(resources.GetObject("Back_Button.Image")));
+            this.Back_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Back_Button.Location = new System.Drawing.Point(-3, 1023);
             this.Back_Button.Name = "Back_Button";
             this.Back_Button.Size = new System.Drawing.Size(99, 63);
             this.Back_Button.TabIndex = 29;
+            this.Back_Button.Text = "🔙";
             this.Back_Button.UseVisualStyleBackColor = false;
             this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
             // 
@@ -398,7 +399,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1199, 718);
+            this.ClientSize = new System.Drawing.Size(1934, 1061);
             this.Controls.Add(this.Back_Button);
             this.Controls.Add(this.Coin_Panel);
             this.Name = "BuyCoinsForm";
