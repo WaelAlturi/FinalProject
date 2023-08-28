@@ -229,10 +229,10 @@
             this.CVVTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CVVTextBox.Enabled = false;
             this.CVVTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CVVTextBox.Location = new System.Drawing.Point(540, 294);
+            this.CVVTextBox.Location = new System.Drawing.Point(550, 297);
             this.CVVTextBox.MaxLength = 3;
             this.CVVTextBox.Name = "CVVTextBox";
-            this.CVVTextBox.Size = new System.Drawing.Size(70, 22);
+            this.CVVTextBox.Size = new System.Drawing.Size(68, 22);
             this.CVVTextBox.TabIndex = 19;
             // 
             // MonthCB
@@ -399,7 +399,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1934, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.Back_Button);
             this.Controls.Add(this.Coin_Panel);
             this.Name = "BuyCoinsForm";

@@ -39,8 +39,10 @@
             this.Login_Register_Panel = new System.Windows.Forms.Panel();
             this.ShowPassword_CB = new System.Windows.Forms.CheckBox();
             this.AddData_Button = new System.Windows.Forms.Button();
-            this.Login_Rigester_LBL = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.forgetPassword_BTN = new System.Windows.Forms.Button();
+            this.confirmPassword_Text = new System.Windows.Forms.TextBox();
+            this.newPassword_Text = new System.Windows.Forms.TextBox();
             this.Login_Register_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -147,9 +149,11 @@
             // 
             this.Login_Register_Panel.BackColor = System.Drawing.Color.Transparent;
             this.Login_Register_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Login_Register_Panel.Controls.Add(this.newPassword_Text);
+            this.Login_Register_Panel.Controls.Add(this.confirmPassword_Text);
+            this.Login_Register_Panel.Controls.Add(this.forgetPassword_BTN);
             this.Login_Register_Panel.Controls.Add(this.ShowPassword_CB);
             this.Login_Register_Panel.Controls.Add(this.AddData_Button);
-            this.Login_Register_Panel.Controls.Add(this.Login_Rigester_LBL);
             this.Login_Register_Panel.Controls.Add(this.Email_Text);
             this.Login_Register_Panel.Controls.Add(this.UserName_lbl);
             this.Login_Register_Panel.Controls.Add(this.Email_lbl);
@@ -191,18 +195,6 @@
             this.AddData_Button.UseVisualStyleBackColor = false;
             this.AddData_Button.Click += new System.EventHandler(this.AddData_Button_Click);
             // 
-            // Login_Rigester_LBL
-            // 
-            this.Login_Rigester_LBL.AutoSize = true;
-            this.Login_Rigester_LBL.BackColor = System.Drawing.Color.Transparent;
-            this.Login_Rigester_LBL.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Rigester_LBL.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Login_Rigester_LBL.Location = new System.Drawing.Point(100, 370);
-            this.Login_Rigester_LBL.Name = "Login_Rigester_LBL";
-            this.Login_Rigester_LBL.Size = new System.Drawing.Size(152, 16);
-            this.Login_Rigester_LBL.TabIndex = 9;
-            this.Login_Rigester_LBL.Text = "Don`t have an acoount ? ";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -213,6 +205,52 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // forgetPassword_BTN
+            // 
+            this.forgetPassword_BTN.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.forgetPassword_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.forgetPassword_BTN.FlatAppearance.BorderSize = 0;
+            this.forgetPassword_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forgetPassword_BTN.Font = new System.Drawing.Font("Miriam Fixed", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgetPassword_BTN.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.forgetPassword_BTN.Location = new System.Drawing.Point(46, 354);
+            this.forgetPassword_BTN.Name = "forgetPassword_BTN";
+            this.forgetPassword_BTN.Size = new System.Drawing.Size(175, 48);
+            this.forgetPassword_BTN.TabIndex = 12;
+            this.forgetPassword_BTN.Text = "I Forget Password";
+            this.forgetPassword_BTN.UseVisualStyleBackColor = false;
+            this.forgetPassword_BTN.Click += new System.EventHandler(this.forgetPassword_BTN_Click);
+            // 
+            // confirmPassword_Text
+            // 
+            this.confirmPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
+            this.confirmPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.confirmPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.confirmPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.confirmPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
+            this.confirmPassword_Text.ForeColor = System.Drawing.Color.Black;
+            this.confirmPassword_Text.Location = new System.Drawing.Point(99, 221);
+            this.confirmPassword_Text.Multiline = true;
+            this.confirmPassword_Text.Name = "confirmPassword_Text";
+            this.confirmPassword_Text.Size = new System.Drawing.Size(281, 28);
+            this.confirmPassword_Text.TabIndex = 13;
+            this.confirmPassword_Text.Visible = false;
+            // 
+            // newPassword_Text
+            // 
+            this.newPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
+            this.newPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.newPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.newPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
+            this.newPassword_Text.ForeColor = System.Drawing.Color.Black;
+            this.newPassword_Text.Location = new System.Drawing.Point(99, 163);
+            this.newPassword_Text.Multiline = true;
+            this.newPassword_Text.Name = "newPassword_Text";
+            this.newPassword_Text.Size = new System.Drawing.Size(281, 28);
+            this.newPassword_Text.TabIndex = 14;
+            this.newPassword_Text.Visible = false;
             // 
             // LoginForm
             // 
@@ -245,9 +283,11 @@
         private System.Windows.Forms.Button Login_Register_btn;
         private System.Windows.Forms.Panel Login_Register_Panel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Login_Rigester_LBL;
         private System.Windows.Forms.Button AddData_Button;
         private System.Windows.Forms.CheckBox ShowPassword_CB;
+        private System.Windows.Forms.Button forgetPassword_BTN;
+        private System.Windows.Forms.TextBox newPassword_Text;
+        private System.Windows.Forms.TextBox confirmPassword_Text;
     }
 }
 

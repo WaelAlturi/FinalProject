@@ -2,7 +2,6 @@ C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProj
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProject.exe
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
-C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.SuggestedBindingRedirects.cache
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache

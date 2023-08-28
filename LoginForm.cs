@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FinalProject
 {// הגדרת מחלקה חלקית ציבורית בשם LoginForm שמורישה מהמחלקה Form
@@ -51,6 +52,7 @@ namespace FinalProject
         {
             try
             {
+                string EmailN = Email_Text.Text;
                 // בדיקה אם טקסט הכפתור הוא "Register"
                 if (Login_Register_btn.Text == "Register")
                 {
@@ -116,13 +118,131 @@ namespace FinalProject
                             // להחליף את טקסט הכפתור וטקסט התווית להחלפה למצב התחברות
                             Login_Register_btn.Text = "Login";
                             AddData_Button.Text = "Register";
-                            Login_Rigester_LBL.Text = "אין לך חשבון?";
                         }
                         catch (Exception err)
                         {
                             // להציג הודעות שגיאות שקשורות לבסיס הנתונים
                             MessageBox.Show(err.Message);
                         }
+                    }
+                }
+                else if (Login_Register_btn.Text == "Cheack")
+                {
+                    bool Cheack = false;
+                    string[,] Cheacks = new string[rowCount, 2];
+                    Cheacks = CheackEmailAndUserName();
+
+                    // לקבל את האימייל, הסיסמה ושם המשתמש שהוזנו מתיבות הטקסט המתאימות
+                    for (int i = 0; i < rowCount; i++)
+                    {
+                        if (EmailN == Cheacks[i, 0])
+                        {
+                            Cheack = true;
+                            MessageBox.Show("Add New Password");
+                        }
+                    }
+                    if (Cheack)
+                    {
+                        try
+                        {
+                            Login_Register_btn.Text = "Update Password";
+                            Email_lbl.Visible = false;
+                            Email_Text.Visible = false;
+                            newPassword_Text.Visible = true;
+                            confirmPassword_Text.Visible = true;
+                            UserName_lbl.Visible = true;
+                            Password_lbl.Visible = true;
+                            UserName_lbl.Text = "NewPassword:";
+                            Password_lbl.Text = "ConfirmPassword:";
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message);
+                        }
+                    }
+                }
+                else if (Login_Register_btn.Text == "Cheack")
+                {
+                    // במקרה שבו הטקסט של הכפתור "Login_Register_btn" הוא "Cheack"
+
+                    bool Cheack = false;
+                    // הגדרת משתנה בוליאני "Cheack" כמאגר לבדיקה
+
+                    string[,] Cheacks = new string[rowCount, 2];
+                    // הגדרת מערך דו-ממדי "Cheacks" בגודל שנקבע מראש בשני שורות ושתי עמודות
+
+                    Cheacks = CheackEmailAndUserName();
+                    // קריאה לפונקציה "CheackEmailAndUserName()" והשמת התוצאה במערך "Cheacks"
+
+                    // קבלת אימייל, סיסמה ושם משתמש מתיבות הטקסט המתאימות
+                    for (int i = 0; i < rowCount; i++)
+                    {
+                        if (EmailN == Cheacks[i, 0])
+                        {
+                            Cheack = true;
+                            // אם האימייל נמצא במערך, משנה את הערך של "Cheack" ל־true
+                            MessageBox.Show("הוסף סיסמה חדשה");
+                        }
+                    }
+                    if (Cheack)
+                    {
+                        // אם "Cheack" הוא true
+
+                        try
+                        {
+                            Login_Register_btn.Text = "Update Password";
+                            // שינוי תוכן הכפתור "Login_Register_btn" לטקסט "עדכן סיסמה"
+
+                            Email_lbl.Visible = false;
+                            Email_Text.Visible = false;
+                            // הסתרת התווית ותיבת הטקסט של האימייל
+
+                            newPassword_Text.Visible = true;
+                            confirmPassword_Text.Visible = true;
+                            // הצגת תיבות הטקסט להזנת הסיסמה החדשה ואישור הסיסמה
+
+                            UserName_lbl.Visible = true;
+                            Password_lbl.Visible = true;
+                            // הצגת התוויות "UserName_lbl" ו־"Password_lbl"
+
+                            UserName_lbl.Text = "NewPassword:";
+                            Password_lbl.Text = "ConfirmPassword:";
+                            // שינוי הטקסט של התוויות "UserName_lbl" ו־"Password_lbl"
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message);
+                            // הצגת חלון הודעת שגיאה עם הודעת השגיאה שנכתבה במשתנה "err"
+                        }
+                    }
+                }
+
+                else if (Login_Register_btn.Text == "Update Password")
+                {
+                    try
+                    {
+                        // יצירת חיבור למסד הנתונים
+                        SqlConnection mySqlConnection = new SqlConnection("server=DESKTOP-PC5NLQI\\SQLEXPRESS01;database=FinalProject;Integrated Security=SSPI;");
+                        SqlCommand mysqlcommand = mySqlConnection.CreateCommand();
+
+                        // פתיחת החיבור למסד הנתונים
+                        mySqlConnection.Open();
+
+                        // שאילתת SQL לעדכון המידע בטבלת Login לפי מאיל
+                        mysqlcommand.CommandText = $"update Login set Password= '{newPassword_Text.Text}' where Email='{EmailN}';";
+
+                        // ביצוע השאילתה
+                        mysqlcommand.ExecuteNonQuery();
+
+                        // הודעה למשתמש שהעדכון בוצע בהצלחה
+                        MessageBox.Show("Updating Successfully");
+
+                        // סגירת החיבור למסד הנתונים
+                        mySqlConnection.Close();
+                    }
+                    catch(Exception err)
+                    {
+                        MessageBox.Show(err.Message);
                     }
                 }
                 else
@@ -250,9 +370,18 @@ namespace FinalProject
                     // להחליף למצב רישום: לעדכן את טקסט הכפתור, טקסט התווית, ולהציג את תיבת הטקסט לאימייל
                     Login_Register_btn.Text = "Register";
                     AddData_Button.Text = "Login";
-                    Login_Rigester_LBL.Text = "כבר יש לך חשבון?";
+                    Email_Text.Location = new Point(99, 105);
+                    Email_lbl.Location = new Point(99, 78);
                     Email_lbl.Visible = true;
                     Email_Text.Visible = true;
+                    newPassword_Text.Visible = false;
+                    confirmPassword_Text.Visible = false;
+                    PassWord_Text.Visible = true;
+                    UserName_Text.Visible = true;
+                    UserName_lbl.Visible = true;
+                    Password_lbl.Visible = true;
+                    UserName_lbl.Text = "UserName:";
+                    Password_lbl.Text = "Password:";
                     Email_Text.Text = "";
                     UserName_Text.Text = "";
                     PassWord_Text.Text = "";
@@ -262,9 +391,16 @@ namespace FinalProject
                     // להחליף למצב התחברות: לעדכן את טקסט הכפתור, טקסט התווית, ולהסתיר את תיבת הטקסט לאימייל
                     Login_Register_btn.Text = "Login";
                     AddData_Button.Text = "Register";
-                    Login_Rigester_LBL.Text = "אין לך חשבון?";
                     Email_lbl.Visible = false;
                     Email_Text.Visible = false;
+                    newPassword_Text.Visible = false;
+                    confirmPassword_Text.Visible = false;
+                    PassWord_Text.Visible = true;
+                    UserName_Text.Visible = true;
+                    UserName_lbl.Visible = true;
+                    Password_lbl.Visible = true;
+                    UserName_lbl.Text = "UserName:";
+                    Password_lbl.Text = "Password:";
                     Email_Text.Text = "";
                     UserName_Text.Text = "";
                     PassWord_Text.Text = "";
@@ -286,6 +422,42 @@ namespace FinalProject
             else
                 PassWord_Text.PasswordChar = '●';
         }
+
+        private void forgetPassword_BTN_Click(object sender, EventArgs e)
+        {
+            // שימוש באירוע קליק עבור כפתור "forgetPassword_BTN"
+
+            Login_Register_btn.Text = "Cheack";
+            // שינוי תוכן הכפתור "Login_Register_btn" לטקסט "בדוק"
+
+            Email_Text.Location = new Point(99, 221);
+            // שינוי מיקום של תיבת הטקסט "Email_Text" למיקום (99, 221)
+
+            Email_lbl.Location = new Point(99, 194);
+            // שינוי מיקום של התווית "Email_lbl" למיקום (99, 194)
+
+            AddData_Button.Text = "Login";
+            // שינוי תוכן הכפתור "AddData_Button" לטקסט "התחברות"
+
+            Email_lbl.Visible = true;
+            // הצגת התווית "Email_lbl"
+
+            Email_Text.Visible = true;
+            // הצגת תיבת הטקסט "Email_Text"
+
+            PassWord_Text.Visible = false;
+            // הסתרת תיבת הטקסט "PassWord_Text"
+
+            UserName_Text.Visible = false;
+            // הסתרת תיבת הטקסט "UserName_Text"
+
+            UserName_lbl.Visible = false;
+            // הסתרת התווית "UserName_lbl"
+
+            Password_lbl.Visible = false;
+            // הסתרת התווית "Password_lbl"
+        }
+
     }
 
 }

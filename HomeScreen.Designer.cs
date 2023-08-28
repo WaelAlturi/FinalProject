@@ -43,11 +43,12 @@
             this.addShortCut = new System.Windows.Forms.Button();
             this.Menu_Button = new System.Windows.Forms.Button();
             this.Menu_Panel = new System.Windows.Forms.Panel();
+            this.Admin_Button = new System.Windows.Forms.Button();
             this.Exit_Button = new System.Windows.Forms.Button();
             this.Logout_Button = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Reload_BTN = new System.Windows.Forms.Button();
-            this.Admin_Button = new System.Windows.Forms.Button();
+            this.deleteAllShortCut = new System.Windows.Forms.Button();
             this.Libary_Panel.SuspendLayout();
             this.Menu_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -225,6 +226,20 @@
             this.Menu_Panel.TabIndex = 8;
             this.Menu_Panel.Visible = false;
             // 
+            // Admin_Button
+            // 
+            this.Admin_Button.FlatAppearance.BorderSize = 0;
+            this.Admin_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Admin_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Admin_Button.Location = new System.Drawing.Point(1, 86);
+            this.Admin_Button.Name = "Admin_Button";
+            this.Admin_Button.Size = new System.Drawing.Size(117, 36);
+            this.Admin_Button.TabIndex = 4;
+            this.Admin_Button.Text = "Admin";
+            this.Admin_Button.UseVisualStyleBackColor = true;
+            this.Admin_Button.Visible = false;
+            this.Admin_Button.Click += new System.EventHandler(this.Admin_Button_Click);
+            // 
             // Exit_Button
             // 
             this.Exit_Button.FlatAppearance.BorderSize = 0;
@@ -271,19 +286,21 @@
             this.Reload_BTN.UseVisualStyleBackColor = false;
             this.Reload_BTN.Click += new System.EventHandler(this.Reload_BTN_Click);
             // 
-            // Admin_Button
+            // deleteAllShortCut
             // 
-            this.Admin_Button.FlatAppearance.BorderSize = 0;
-            this.Admin_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Admin_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Admin_Button.Location = new System.Drawing.Point(1, 86);
-            this.Admin_Button.Name = "Admin_Button";
-            this.Admin_Button.Size = new System.Drawing.Size(117, 36);
-            this.Admin_Button.TabIndex = 4;
-            this.Admin_Button.Text = "Admin";
-            this.Admin_Button.UseVisualStyleBackColor = true;
-            this.Admin_Button.Visible = false;
-            this.Admin_Button.Click += new System.EventHandler(this.Admin_Button_Click);
+            this.deleteAllShortCut.BackColor = System.Drawing.Color.Transparent;
+            this.deleteAllShortCut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteAllShortCut.FlatAppearance.BorderSize = 0;
+            this.deleteAllShortCut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteAllShortCut.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAllShortCut.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.deleteAllShortCut.Location = new System.Drawing.Point(264, 289);
+            this.deleteAllShortCut.Name = "deleteAllShortCut";
+            this.deleteAllShortCut.Size = new System.Drawing.Size(62, 44);
+            this.deleteAllShortCut.TabIndex = 9;
+            this.deleteAllShortCut.Text = "❎";
+            this.deleteAllShortCut.UseVisualStyleBackColor = false;
+            this.deleteAllShortCut.Click += new System.EventHandler(this.deleteAllShortCut_Click);
             // 
             // HomeScreen
             // 
@@ -293,6 +310,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1553, 822);
+            this.Controls.Add(this.deleteAllShortCut);
             this.Controls.Add(this.Reload_BTN);
             this.Controls.Add(this.Menu_Panel);
             this.Controls.Add(this.Menu_Button);
@@ -331,5 +349,6 @@
         private System.Windows.Forms.Button BREAKOUT;
         private System.Windows.Forms.Button Reload_BTN;
         private System.Windows.Forms.Button Admin_Button;
+        private System.Windows.Forms.Button deleteAllShortCut;
     }
 }

@@ -559,5 +559,38 @@ namespace FinalProject
             this.Hide();
             LF.ShowDialog();
         }
+
+        private void deleteAllShortCut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // יצירת חיבור למסד הנתונים של SQL Server באמצעות מחרוזת החיבור
+                SqlConnection mySqlConnection = new SqlConnection("server=DESKTOP-PC5NLQI\\SQLEXPRESS01;database=FinalProject;Integrated Security=SSPI;");
+
+                // יצירת אובייקט של שאילתת SQL וקישור אותו לחיבור
+                SqlCommand mysqlcommand = mySqlConnection.CreateCommand();
+
+                // פתיחת החיבור למסד הנתונים
+                mySqlConnection.Open();
+
+                // בניית והגדרת השאילתה שתמחק טבלה בשם המבוסס על שם המשתמש מכינוי טופס ההתחברות
+                mysqlcommand.CommandText = $"DROP TABLE {LoginForm.username} ;";
+
+                // ביצוע השאילתה למחיקת הטבלה הנציינת
+                mysqlcommand.ExecuteNonQuery();
+
+                // הצגת תיבת הודעה המציינת שהפעולה בוצעה בהצלחה
+                MessageBox.Show("All APPS Has Been Deleted");
+
+                // סגירת החיבור למסד הנתונים
+                mySqlConnection.Close();
+            }
+            catch (Exception err)
+            {
+                // אם חולצה חריגה, יציג תיבת הודעה עם הודעת שגיאה
+                MessageBox.Show(err.Message);
+            }
+        }
+
     }
 }
