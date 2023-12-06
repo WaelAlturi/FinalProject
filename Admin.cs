@@ -203,6 +203,9 @@ namespace FinalProject
 
                 // סגירת החיבור למסד הנתונים
                 mySqlConnection.Close();
+                Admin LF = new Admin();
+                this.Hide();
+                LF.ShowDialog();
             }
             catch (Exception err)
             {

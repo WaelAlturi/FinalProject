@@ -1,0 +1,10 @@
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pacman.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pc_Man_Game_MOO_ICT.Form1.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pc_Man_Game_MOO_ICT.Properties.Resources.resources
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pacman.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pc Man Game MOO ICT.exe
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\obj\Debug\Pc Man Game MOO ICT.pdb
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\bin\Debug\Pc Man Game MOO ICT.exe.config
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\bin\Debug\Pc Man Game MOO ICT.exe
+C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\bin\Debug\Pc Man Game MOO ICT.pdb

@@ -23,14 +23,10 @@ namespace Shoot_Out_Game_MOO_ICT
         int score;// הניקוד של השחקן.
         List<PictureBox> zombiesList = new List<PictureBox>();// רשימה לאחסון זומבים PictureBoxes.
 
-
-
-
         public Form1()
         {
             InitializeComponent();
             RestartGame();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -115,10 +111,7 @@ namespace Shoot_Out_Game_MOO_ICT
                         x.Top += zombieSpeed;
                         ((PictureBox)x).Image = Properties.Resources.zdown;
                     }
-
                 }
-
-
                 // חזור על הפקדים שוב כדי לבדוק אם יש התנגשויות כדורים-זומבים.
                 foreach (Control j in this.Controls)
                 {
@@ -139,11 +132,7 @@ namespace Shoot_Out_Game_MOO_ICT
                         }
                     }
                 }
-
-
             }
-
-
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)

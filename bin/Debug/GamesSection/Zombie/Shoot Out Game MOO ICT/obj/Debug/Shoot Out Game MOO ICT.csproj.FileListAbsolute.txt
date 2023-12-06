@@ -23,7 +23,6 @@ C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSect
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\bin\Debug\Shoot Out Game MOO ICT.exe
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\bin\Debug\Shoot Out Game MOO ICT.pdb
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\obj\Debug\Shoot Out Game MOO ICT.csproj.AssemblyReference.cache
-C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\obj\Debug\Shoot Out Game MOO ICT.csproj.SuggestedBindingRedirects.cache
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\obj\Debug\Shoot_Out_Game_MOO_ICT.Form1.resources
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\obj\Debug\Shoot_Out_Game_MOO_ICT.Properties.Resources.resources
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\obj\Debug\Shoot Out Game MOO ICT.csproj.GenerateResource.cache

@@ -15,7 +15,7 @@ namespace Pc_Man_Game_MOO_ICT
         bool goup, godown, goleft, goright, isGameOver;// הכרזה על משתנים בוליאניים למעקב אחר כיווני תנועה ומצב משחק.
 
 
-        int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY; // הכרזה על משתנים שלמים למעקב אחר ציונים ומהירויות.
+        int score, playerSpeed, ghostSpeed; // הכרזה על משתנים שלמים למעקב אחר ציונים ומהירויות.
 
        
 
@@ -27,16 +27,13 @@ namespace Pc_Man_Game_MOO_ICT
         public Form1()
         {
             InitializeComponent();// מאתחל את מרכיבי הטופס.
-
             resetGame();// קורא לפונקציה "resetGame" כדי לאתחל את מצב המשחק.
-
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-
             if(e.KeyCode == Keys.Up)// אם מקש "מעלה" נלחץ, הגדר את דגל "גופ" ל-true.
             {
                 goup = true;
@@ -54,7 +51,6 @@ namespace Pc_Man_Game_MOO_ICT
                 goright = true;
             }
         }
-
         private void keyisup(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)// אם מקש "מעלה" משוחרר, הגדר את דגל "גופ" ל-false.
@@ -82,7 +78,6 @@ namespace Pc_Man_Game_MOO_ICT
         
         private void mainGameTimer(object sender, EventArgs e)
         {
-
             txtScore.Text = "Score: " + score;// עדכן את הניקוד המוצג בתיבת הטקסט "txtScore"
 
             if (goleft == true)// אם השחקן צריך לזוז שמאלה
@@ -105,25 +100,6 @@ namespace Pc_Man_Game_MOO_ICT
                 pacman.Top -= playerSpeed;// הזז את ה-"pacman" PictureBox כלפי מעלה.
                 pacman.Image = Properties.Resources.Up;// שנה את התמונה של "פקמן" לתמונה הפונה כלפי מעלה.
             }
-
-            //if (pacman.Left < -10)// אם "pacman" זז מהגבול השמאלי
-            //{
-            //    pacman.Left = 680;// עטפו אותו עד הגבול הימני.
-            //}
-            //if (pacman.Left > 680)// אם "pacman" זז מהגבול הימני
-            //{
-            //    pacman.Left = -10;// עטפו אותו אל הגבול השמאלי.
-            //}
-
-            //if(pacman.Top < -10)// אם "pacman" זז מהגבול העליון
-            //{
-            //    pacman.Top = 550;// עטפו אותו עד לגבול התחתון.
-            //}
-            //if(pacman.Top > 550)// אם "pacman" זז מהגבול התחתון
-            //{
-            //    pacman.Top = 0;// עטפו אותו עד הגבול העליון
-            //}
-
             foreach(Control x in this.Controls)// עברו בלולאה בין כל הפקדים בטופס.
             {
                 if(x is PictureBox)// בדוק אם הפקד הוא PictureBox
@@ -135,9 +111,7 @@ namespace Pc_Man_Game_MOO_ICT
                             score += 1;// הגדל את הניקוד.
                             x.Visible = false;// הסתר את המטבע PictureBox.
                         }
-                        
                     }
-
                     if((string)x.Tag == "wall")// אם ל-PictureBox יש תג "wall"
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))// אם "pacman" מצטלב עם הקיר PictureBox
@@ -152,8 +126,6 @@ namespace Pc_Man_Game_MOO_ICT
                             if (godown == true)
                                 pacman.Top -= playerSpeed;
                         }
-                        
-
                     }
 
                     if((string)x.Tag == "ghost") //אם ל -PictureBox יש תג "ghost"
@@ -164,71 +136,39 @@ namespace Pc_Man_Game_MOO_ICT
                         }
                         if (x.Left > pacman.Left)
                         {
-                            x.Left -= yellowGhostSpeed;
+                            x.Left -= ghostSpeed;
+
                         }
                         if (x.Left < pacman.Left)
                         {
-                            x.Left += yellowGhostSpeed;
+                            x.Left += ghostSpeed;
+
                         }
                         if (x.Top > pacman.Top)
                         {
-                            x.Top -= yellowGhostSpeed;
+                            x.Top -= ghostSpeed;
+
                         }
                         if (x.Top < pacman.Top)
                         {
-                            x.Top += yellowGhostSpeed;
+                            x.Top += ghostSpeed;
                         }
-
                     }
-                    
                 }
             }
-
-
-            // moving ghosts
-
-
-            // בדוק אם pinkGhost מגיע לגבולות העליונים או התחתונים.
-            if (pinkGhost.Top < 83 || pinkGhost.Top > 770)
-            {
-                pinkGhostY = -pinkGhostY;// הפוך את pinkGhostY כדי לשנות את הכיוון האנכי שלו.
-
-            }
-            // בדוק אם pinkGhost מגיע לגבול השמאלי או הימני.
-            if (pinkGhost.Left < 0 || pinkGhost.Left > 620|| pinkGhost.Left < 424 || pinkGhost.Left > 1480)
-            {
-                pinkGhostX = -pinkGhostX;// הפוך את pinkGhostX כדי לשנות את הכיוון האופקי שלו.
-            }
-            if (redGhost.Left < 424 || redGhost.Left > 1480 || redGhost.Top < 83 || redGhost.Top > 770)
-            {
-                redGhostSpeed = -redGhostSpeed;
-            }
-            if (yellowGhost.Left < 424 || yellowGhost.Left > 1480 || yellowGhost.Top < 83 || yellowGhost.Top > 770)
-            {
-                yellowGhostSpeed = -yellowGhostSpeed;
-            }
-
-
             //// בדוק אם הניקוד של השחקן מגיע ל-46, מה שמצביע על ניצחון.
             if (score == 75)
             {
                 gameOver("You Win!");// קרא לפונקציית gameOver עם הסמל "אתה מנצח!" הוֹדָעָה.
             }
-
-
         }
-
         private void resetGame()
         {
-
             txtScore.Text = "Score: 0";// אפס את הניקוד המוצג בתיבת הטקסט "txtScore" ל-0.
             score = 0;// אפס את משתנה הניקוד ל-0.
 
             // אפס את המהירויות של רוחות הרפאים והשחקן.
-            //redGhostSpeed = 0;
-            yellowGhostSpeed = 2;
-            //pinkGhostX = 0;
-            //pinkGhostY = 0;
+            ghostSpeed = 2;
             playerSpeed = 8;
 
             isGameOver = false;// הגדר את דגל המשחק לשווא.
@@ -237,24 +177,23 @@ namespace Pc_Man_Game_MOO_ICT
             pacman.Left = 754 ;
             pacman.Top = 610;
 
+            redGhost.Left = 633; 
+            redGhost.Top = 189;
 
-            redGhost.Left = 853;
-            redGhost.Top = 384;
-
-            yellowGhost.Left = 1011;
-            yellowGhost.Top = 381;
+            yellowGhost.Left = 1281;
+            yellowGhost.Top = 189;
 
             pinkGhost.Left = 937;
             pinkGhost.Top = 381;
 
             // הפוך את כל הפקדים של PictureBox לגלויים.
-            foreach (Control x in this.Controls)
-            {
-                if(x is PictureBox)
-                {
-                   x.Visible = true;
-                }
-            }
+            //foreach (Control x in this.Controls)
+            //{
+            //    if(x is PictureBox)
+            //    {
+            //       x.Visible = true;
+            //    }
+            //}
 
              // הפעל את טיימר המשחק.
             gameTimer.Start();
@@ -262,15 +201,11 @@ namespace Pc_Man_Game_MOO_ICT
 
         private void gameOver(string message)
         {
-
             isGameOver = true;// הגדר את דגל המשחק על אמת.
 
             gameTimer.Stop();// עצור את טיימר המשחק.
 
             txtScore.Text = "Score: " + score + Environment.NewLine + message;// עדכן את הניקוד המוצג בתיבת הטקסט "txtScore" כך שיכלול את הניקוד ואת הודעת המשחק.
-
         }
-
-
     }
 }

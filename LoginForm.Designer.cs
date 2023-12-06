@@ -37,12 +37,12 @@
             this.Email_Text = new System.Windows.Forms.TextBox();
             this.Email_lbl = new System.Windows.Forms.Label();
             this.Login_Register_Panel = new System.Windows.Forms.Panel();
+            this.newPassword_Text = new System.Windows.Forms.TextBox();
+            this.confirmPassword_Text = new System.Windows.Forms.TextBox();
+            this.forgetPassword_BTN = new System.Windows.Forms.Button();
             this.ShowPassword_CB = new System.Windows.Forms.CheckBox();
             this.AddData_Button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.forgetPassword_BTN = new System.Windows.Forms.Button();
-            this.confirmPassword_Text = new System.Windows.Forms.TextBox();
-            this.newPassword_Text = new System.Windows.Forms.TextBox();
             this.Login_Register_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.UserName_lbl.AutoSize = true;
             this.UserName_lbl.BackColor = System.Drawing.Color.Transparent;
             this.UserName_lbl.Font = new System.Drawing.Font("Poor Richard", 12F);
-            this.UserName_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UserName_lbl.ForeColor = System.Drawing.Color.White;
             this.UserName_lbl.Location = new System.Drawing.Point(95, 136);
             this.UserName_lbl.Name = "UserName_lbl";
             this.UserName_lbl.Size = new System.Drawing.Size(76, 19);
@@ -65,7 +65,7 @@
             this.Login_Register_btn.FlatAppearance.BorderSize = 0;
             this.Login_Register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Login_Register_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Login_Register_btn.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Login_Register_btn.ForeColor = System.Drawing.Color.White;
             this.Login_Register_btn.Location = new System.Drawing.Point(227, 255);
             this.Login_Register_btn.Name = "Login_Register_btn";
             this.Login_Register_btn.Size = new System.Drawing.Size(113, 70);
@@ -108,7 +108,7 @@
             this.Password_lbl.AutoSize = true;
             this.Password_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Password_lbl.Font = new System.Drawing.Font("Poor Richard", 12F);
-            this.Password_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Password_lbl.ForeColor = System.Drawing.Color.White;
             this.Password_lbl.Location = new System.Drawing.Point(95, 194);
             this.Password_lbl.Name = "Password_lbl";
             this.Password_lbl.Size = new System.Drawing.Size(67, 19);
@@ -137,7 +137,7 @@
             this.Email_lbl.AutoSize = true;
             this.Email_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Email_lbl.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Email_lbl.ForeColor = System.Drawing.Color.White;
             this.Email_lbl.Location = new System.Drawing.Point(95, 78);
             this.Email_lbl.Name = "Email_lbl";
             this.Email_lbl.Size = new System.Drawing.Size(46, 19);
@@ -166,11 +166,57 @@
             this.Login_Register_Panel.Size = new System.Drawing.Size(483, 441);
             this.Login_Register_Panel.TabIndex = 9;
             // 
+            // newPassword_Text
+            // 
+            this.newPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
+            this.newPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.newPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.newPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
+            this.newPassword_Text.ForeColor = System.Drawing.Color.Black;
+            this.newPassword_Text.Location = new System.Drawing.Point(99, 163);
+            this.newPassword_Text.Multiline = true;
+            this.newPassword_Text.Name = "newPassword_Text";
+            this.newPassword_Text.Size = new System.Drawing.Size(281, 28);
+            this.newPassword_Text.TabIndex = 14;
+            this.newPassword_Text.Visible = false;
+            // 
+            // confirmPassword_Text
+            // 
+            this.confirmPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
+            this.confirmPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.confirmPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.confirmPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.confirmPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
+            this.confirmPassword_Text.ForeColor = System.Drawing.Color.Black;
+            this.confirmPassword_Text.Location = new System.Drawing.Point(99, 221);
+            this.confirmPassword_Text.Multiline = true;
+            this.confirmPassword_Text.Name = "confirmPassword_Text";
+            this.confirmPassword_Text.Size = new System.Drawing.Size(281, 28);
+            this.confirmPassword_Text.TabIndex = 13;
+            this.confirmPassword_Text.Visible = false;
+            // 
+            // forgetPassword_BTN
+            // 
+            this.forgetPassword_BTN.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.forgetPassword_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.forgetPassword_BTN.FlatAppearance.BorderSize = 0;
+            this.forgetPassword_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forgetPassword_BTN.Font = new System.Drawing.Font("Miriam Fixed", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgetPassword_BTN.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.forgetPassword_BTN.Location = new System.Drawing.Point(46, 354);
+            this.forgetPassword_BTN.Name = "forgetPassword_BTN";
+            this.forgetPassword_BTN.Size = new System.Drawing.Size(175, 48);
+            this.forgetPassword_BTN.TabIndex = 12;
+            this.forgetPassword_BTN.Text = "I Forget Password";
+            this.forgetPassword_BTN.UseVisualStyleBackColor = false;
+            this.forgetPassword_BTN.Click += new System.EventHandler(this.forgetPassword_BTN_Click);
+            // 
             // ShowPassword_CB
             // 
             this.ShowPassword_CB.AutoSize = true;
             this.ShowPassword_CB.Font = new System.Drawing.Font("Poor Richard", 12F);
-            this.ShowPassword_CB.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ShowPassword_CB.ForeColor = System.Drawing.Color.White;
             this.ShowPassword_CB.Location = new System.Drawing.Point(103, 264);
             this.ShowPassword_CB.Name = "ShowPassword_CB";
             this.ShowPassword_CB.Size = new System.Drawing.Size(118, 23);
@@ -205,52 +251,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            // 
-            // forgetPassword_BTN
-            // 
-            this.forgetPassword_BTN.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.forgetPassword_BTN.BackColor = System.Drawing.Color.Transparent;
-            this.forgetPassword_BTN.FlatAppearance.BorderSize = 0;
-            this.forgetPassword_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forgetPassword_BTN.Font = new System.Drawing.Font("Miriam Fixed", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgetPassword_BTN.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.forgetPassword_BTN.Location = new System.Drawing.Point(46, 354);
-            this.forgetPassword_BTN.Name = "forgetPassword_BTN";
-            this.forgetPassword_BTN.Size = new System.Drawing.Size(175, 48);
-            this.forgetPassword_BTN.TabIndex = 12;
-            this.forgetPassword_BTN.Text = "I Forget Password";
-            this.forgetPassword_BTN.UseVisualStyleBackColor = false;
-            this.forgetPassword_BTN.Click += new System.EventHandler(this.forgetPassword_BTN_Click);
-            // 
-            // confirmPassword_Text
-            // 
-            this.confirmPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
-            this.confirmPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.confirmPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.confirmPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.confirmPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
-            this.confirmPassword_Text.ForeColor = System.Drawing.Color.Black;
-            this.confirmPassword_Text.Location = new System.Drawing.Point(99, 221);
-            this.confirmPassword_Text.Multiline = true;
-            this.confirmPassword_Text.Name = "confirmPassword_Text";
-            this.confirmPassword_Text.Size = new System.Drawing.Size(281, 28);
-            this.confirmPassword_Text.TabIndex = 13;
-            this.confirmPassword_Text.Visible = false;
-            // 
-            // newPassword_Text
-            // 
-            this.newPassword_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(121)))), ((int)(((byte)(157)))));
-            this.newPassword_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.newPassword_Text.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.newPassword_Text.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.newPassword_Text.Font = new System.Drawing.Font("Poor Richard", 12F);
-            this.newPassword_Text.ForeColor = System.Drawing.Color.Black;
-            this.newPassword_Text.Location = new System.Drawing.Point(99, 163);
-            this.newPassword_Text.Multiline = true;
-            this.newPassword_Text.Name = "newPassword_Text";
-            this.newPassword_Text.Size = new System.Drawing.Size(281, 28);
-            this.newPassword_Text.TabIndex = 14;
-            this.newPassword_Text.Visible = false;
             // 
             // LoginForm
             // 

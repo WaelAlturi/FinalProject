@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.Admin_Panel = new System.Windows.Forms.Panel();
+            this.Reload_BTN = new System.Windows.Forms.Button();
             this.Coins_TB = new System.Windows.Forms.TextBox();
             this.Password_TB = new System.Windows.Forms.TextBox();
             this.Email_TB = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.Users_Data_LB = new System.Windows.Forms.ListBox();
             this.Users_Show_LBL = new System.Windows.Forms.Label();
             this.Back_Button = new System.Windows.Forms.Button();
-            this.Reload_BTN = new System.Windows.Forms.Button();
             this.Admin_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,22 @@
             this.Admin_Panel.Name = "Admin_Panel";
             this.Admin_Panel.Size = new System.Drawing.Size(1004, 424);
             this.Admin_Panel.TabIndex = 0;
+            // 
+            // Reload_BTN
+            // 
+            this.Reload_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.Reload_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Reload_BTN.FlatAppearance.BorderSize = 0;
+            this.Reload_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reload_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reload_BTN.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Reload_BTN.Location = new System.Drawing.Point(3, 20);
+            this.Reload_BTN.Name = "Reload_BTN";
+            this.Reload_BTN.Size = new System.Drawing.Size(62, 44);
+            this.Reload_BTN.TabIndex = 31;
+            this.Reload_BTN.Text = "🔄";
+            this.Reload_BTN.UseVisualStyleBackColor = false;
+            this.Reload_BTN.Click += new System.EventHandler(this.Reload_BTN_Click);
             // 
             // Coins_TB
             // 
@@ -164,22 +180,6 @@
             this.Back_Button.Text = "🔙";
             this.Back_Button.UseVisualStyleBackColor = false;
             this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
-            // 
-            // Reload_BTN
-            // 
-            this.Reload_BTN.BackColor = System.Drawing.Color.Transparent;
-            this.Reload_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Reload_BTN.FlatAppearance.BorderSize = 0;
-            this.Reload_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reload_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reload_BTN.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Reload_BTN.Location = new System.Drawing.Point(3, 20);
-            this.Reload_BTN.Name = "Reload_BTN";
-            this.Reload_BTN.Size = new System.Drawing.Size(62, 44);
-            this.Reload_BTN.TabIndex = 31;
-            this.Reload_BTN.Text = "🔄";
-            this.Reload_BTN.UseVisualStyleBackColor = false;
-            this.Reload_BTN.Click += new System.EventHandler(this.Reload_BTN_Click);
             // 
             // Admin
             // 

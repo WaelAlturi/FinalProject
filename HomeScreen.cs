@@ -244,17 +244,16 @@ namespace FinalProject
 
             // במקרה שטבלה כזו כבר קיימת, להוסיף את הקיצור דרך לטבלה הקיימת
             if (tableExists)
-            {
-                // להציג הודעה שהטבלה כבר קיימת בבסיס הנתונים
-                MessageBox.Show($"הטבלה {LoginForm.username} קיימת בבסיס הנתונים.");
                 // להוסיף את הנתיב והשם לטבלה הקיימת
                 addvalue(path, name);
-            }
             else
             {
                 // במקרה שטבלה עם שם המשתמש עדיין לא קיימת, ליצור טבלה חדשה
                 createNewTable(path, name);
             }
+            HomeScreen hs = new HomeScreen();
+            this.Hide();
+            hs.ShowDialog();
         }
         private void createNewTable(string path, string name)
         {
@@ -322,7 +321,7 @@ namespace FinalProject
             }
         }
 
-        private void SuccessBuy(Button gameName)
+        private bool SuccessBuy(Button gameName)
         {
             try
             {
@@ -330,34 +329,39 @@ namespace FinalProject
                 if (GetCoins >= int.Parse(gameName.Text))
                 {
                     // הצגת הודעת רכישה מוצלחת ועדכון כמות המטבעות
-                    string str = gameName.Text.Remove(gameName.Text.Length - 1);
                     MessageBox.Show("רכישה מוצלחת");
                     UpdateCoins(GetCoins -= int.Parse(gameName.Text));
                     gameName.Text = "START";
+                    return true;
                 }
                 else
+                {
                     MessageBox.Show("אין מספיק מטבעות");
+                    return false;
+                }
             }
             catch (Exception err)
             {
                 // הצגת הודעת שגיאה במקרה של חריגה
                 MessageBox.Show(err.Message);
+                return false;
             }
         }
-
         private void PACMAN_Click(object sender, EventArgs e)
         {
             if (PACMAN.Text != "START")
             {
                 // במקרה שהכפתור "PACMAN" נלחץ והמשחק עדיין לא נרכש, לבצע רכישה
-                SuccessBuy(PACMAN);
-                myGames += 1;
-                Updategames();
+                if (SuccessBuy(PACMAN) == true)
+                {
+                    myGames += 1;
+                    Updategames();
+                }
             }
             else
             {
                 // במקרה שהכפתור "PACMAN" נלחץ והמשחק כבר נרכש, להפעיל את המשחק
-                Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\bin\Debug\Pacman.exe");
+                Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Pacman\Pacman\bin\Debug\Pc Man Game MOO ICT.exe");
             }
         }
 
@@ -366,9 +370,11 @@ namespace FinalProject
         {
             if (ZOMBIEGAME.Text != "START")
             {
-                SuccessBuy(ZOMBIEGAME);
-                myGames += 2;
-                Updategames();
+                if (SuccessBuy(ZOMBIEGAME) == true)
+                {
+                    myGames += 2;
+                    Updategames();
+                }
             }
             else
                 Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Zombie\Shoot Out Game MOO ICT\bin\Debug\Shoot Out Game MOO ICT.exe");
@@ -378,9 +384,11 @@ namespace FinalProject
         {
             if (BREAKOUT.Text != "START")
             {
-                SuccessBuy(BREAKOUT);
-                myGames += 4;
-                Updategames();
+                if (SuccessBuy(BREAKOUT) == true)
+                {
+                    myGames += 4;
+                    Updategames();
+                }
             }
             else
                 Process.Start(@"C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\bin\Debug\Breakout.exe");
@@ -584,6 +592,8 @@ namespace FinalProject
 
                 // סגירת החיבור למסד הנתונים
                 mySqlConnection.Close();
+
+
             }
             catch (Exception err)
             {

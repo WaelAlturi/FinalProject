@@ -2,7 +2,6 @@ C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSect
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\bin\Debug\Breakout Game MOO ICT.exe
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\bin\Debug\Breakout Game MOO ICT.pdb
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\obj\Debug\Breakout.csproj.AssemblyReference.cache
-C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\obj\Debug\Breakout.csproj.SuggestedBindingRedirects.cache
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\obj\Debug\Breakout_Game_MOO_ICT.Properties.Resources.resources
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\obj\Debug\Breakout.csproj.GenerateResource.cache
 C:\Users\HP\Desktop\שנה ב (א)\FinalProject\FinalProject\bin\Debug\GamesSection\Breakout\Breakout\obj\Debug\Breakout.csproj.CoreCompileInputs.cache

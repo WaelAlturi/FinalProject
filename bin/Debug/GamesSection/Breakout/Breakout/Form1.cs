@@ -30,8 +30,6 @@ namespace Breakout
         public Form1()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-
             PlaceBlocks(); // הפעלת הפונקציה PlaceBlocks() להצגת הבלוקים במשחק.
         }
 
@@ -65,8 +63,6 @@ namespace Breakout
                 }
             }
         }
-
-
         private void gameOver(string message)
         {
             // סיום המשחק עם הודעה לשחקן.
@@ -118,23 +114,16 @@ namespace Breakout
             }
             setupGame(); // פתיחת המשחק לאחר הצגת הבלוקים.
         }
-
         private void removeBlocks()
         {
-            // הסרת כל הבלוקים מהמשחק.
-
             foreach (PictureBox x in blockArray)
             {
                 this.Controls.Remove(x);
             }
         }
-
-
-
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
             // תהליך המשחק בכל צעד של הטיימר.
-
             txtScore.Text = "Score: " + score;// עדכון הניקוד בתיבת הטקסט.
 
             // תנועת השחקן והכדור.
@@ -142,7 +131,6 @@ namespace Breakout
             {
                 player.Left -= playerSpeed;
             }
-
             if (goRight == true && player.Left < 700)
             {
                 player.Left += playerSpeed;
@@ -152,7 +140,6 @@ namespace Breakout
             ball.Top += bally;
 
             // התקדמות הכדור ובדיקת פיגוע בקירות המסגרת.
-
             if (ball.Left < 0 || ball.Left > 775)
             {
                 ballx = -ballx;
@@ -163,7 +150,6 @@ namespace Breakout
             }
 
             // פיגוע בשחקן ושינוי תנועת הכדור בהתאם.
-
             if (ball.Bounds.IntersectsWith(player.Bounds))
             {
 
@@ -182,7 +168,6 @@ namespace Breakout
             }
 
             // פיגוע בבלוקים וציון נקודות.
-
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "blocks")
@@ -212,16 +197,10 @@ namespace Breakout
             {
                 gameOver("You Lose!! Press Enter to try again");
             }
-
-
-
         }
-
         private void keyisdown(object sender, KeyEventArgs e)
         {
             // השקפת השחקן במקלע תנועה.
-
-
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
@@ -230,13 +209,10 @@ namespace Breakout
             {
                 goRight = true;
             }
-
         }
-
         private void keyisup(object sender, KeyEventArgs e)
         {
             // עצירת השחקן כאשר המקשים מופקעים.
-
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
